@@ -4,16 +4,16 @@ import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { RestaurantMenu } from '@/components/restaurant-menu';
 
-const img = (n) => `${process.env.PUBLIC_URL || ''}/assets/${n}.png`;
-const sushi = img('sushi-new');
-const boat = img('sushi-boat-new');
-const dinner = img('dinner-new');
-const blossoms = img('blossoms-new');
-const interior = img('interior-new');
-const dining = img('dining-new');
-const roomWide = img('room-new');
-const tables = img('tables-new');
-const platter = img('sushi-platter-new');
+const img = (n) => `${process.env.PUBLIC_URL || ''}/assets/${n}.jpg`;
+const sushi = img('sushi');
+const boat = img('sushi-boat');
+const dinner = img('dinner');
+const blossoms = img('blossoms');
+const interior = img('interior');
+const dining = img('dining');
+const roomWide = img('room');
+const tables = img('tables');
+const platter = img('sushi-platter');
 
 const TEL = 'tel:+4960742116266';
 const mapUrl = 'https://www.google.com/maps/search/?api=1&query=Mizu+Restaurant+Ober-Rodener+Str.+42+63322+R%C3%B6dermark';
@@ -76,9 +76,9 @@ export default function Home() {
             <p className="section-intro">Von feinem Sushi bis zu warmen Lieblingsgerichten.<br />Zum Entdecken, Teilen und immer wieder Genießen.</p>
           </div>
           <div className="food-grid">
-            <article className="food-item"><img src={sushi} alt="Sushi-Auswahl mit Lachs-Sashimi, Nigiri und knusprigen Rollen" loading="lazy" /><p className="food-tag">Sushi & Sashimi</p><h3>Kleine Kunstwerke. Großer Genuss.</h3><p>California Rolls, Lachs- und Thunfisch-Sashimi oder knusprige Sushi-Rollen – entdecke deine Favoriten.</p></article>
-            <article className="food-item"><img src={dinner} alt="Asiatische Bowl mit Gemüse neben einer angerichteten Sushi-Platte" loading="lazy" /><p className="food-tag">Asiatische Lieblingsgerichte</p><h3>Wärmend. Würzig. Wunderbar.</h3><p>Chicken Katsu, knusprige Ente und Curry mit Kokosmilch. Dazu kleine Gerichte, die sich gut teilen lassen.</p></article>
-            <article className="food-item"><img src={boat} alt="Sushi auf einem Holzboot mit einem Getränk im Hintergrund" loading="lazy" /><p className="food-tag">Gemeinsam genießen</p><h3>Der schönste Grund zu bleiben.</h3><p>Ein Sushi-Boot für den Tisch, Mizu Eistee oder ein Cocktail. Und zum Abschluss etwas Süßes, zum Beispiel Mochi.</p></article>
+            <article className="food-item"><div className="food-media"><img src={sushi} alt="Sushi-Auswahl mit Lachs-Sashimi, Nigiri und knusprigen Rollen" loading="lazy" /></div><p className="food-tag">Sushi & Sashimi</p><h3>Kleine Kunstwerke. Großer Genuss.</h3><p>California Rolls, Lachs- und Thunfisch-Sashimi oder knusprige Sushi-Rollen – entdecke deine Favoriten.</p></article>
+            <article className="food-item"><div className="food-media"><img src={dinner} alt="Asiatische Bowl mit Gemüse neben einer angerichteten Sushi-Platte" loading="lazy" /></div><p className="food-tag">Asiatische Lieblingsgerichte</p><h3>Wärmend. Würzig. Wunderbar.</h3><p>Chicken Katsu, knusprige Ente und Curry mit Kokosmilch. Dazu kleine Gerichte, die sich gut teilen lassen.</p></article>
+            <article className="food-item"><div className="food-media"><img src={boat} alt="Sushi auf einem Holzboot mit einem Getränk im Hintergrund" loading="lazy" /></div><p className="food-tag">Gemeinsam genießen</p><h3>Der schönste Grund zu bleiben.</h3><p>Ein Sushi-Boot für den Tisch, Mizu Eistee oder ein Cocktail. Und zum Abschluss etwas Süßes, zum Beispiel Mochi.</p></article>
           </div>
           <div className="kitchen-bottom"><span>20–30 € pro Person · Vegetarische & vegane Gerichte</span><Button variant="link" asChild><a href="#speisekarte" data-testid="kitchen-menu-link">Zur Speisekarte <ArrowRight /></a></Button></div>
         </section>
@@ -104,7 +104,7 @@ export default function Home() {
                 </Button>
               ))}
             </div>
-            <p className="photo-credit">Einblicke aus deinen bereitgestellten Google-Maps-Fotos.</p>
+            <p className="photo-credit">Echte Einblicke aus dem Mizu in Rödermark.</p>
           </div>
         </section>
         <section className="review-section" aria-label="Gästestimmen">
